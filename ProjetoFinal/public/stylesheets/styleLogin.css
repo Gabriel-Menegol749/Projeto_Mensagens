@@ -2,6 +2,10 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(31, 31, 31);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -13,8 +17,7 @@ a {
   font-weight: bold;
   margin: 0vh 0vh 0vh 50vh;
   color: white;
-  position: absolute;
-  z-index: 3;
+  margin: 0;
 }
 
 .login{
@@ -23,12 +26,8 @@ a {
   align-items: center;
   width: 100%;
   padding: 20px;
-  margin: 5px;
-  margin-top: 8vh;
   height: 400px;
   position: relative;
-  overflow: hidden;
-
 }
 .login::before {
   content: "";
@@ -51,8 +50,6 @@ a {
   flex-direction: column;
   justify-content: center;
 
-  width: 90%px;
-  height: 500px;
   padding-left: 20px;
 }
 .textoBoasVindasLog{
@@ -60,6 +57,7 @@ a {
   font-weight: boldx;
   margin: 0;
   color: white;
+  align-items: center;
 }
 .textoBoasVindasLog2{
   font-size: 30px;
@@ -68,15 +66,7 @@ a {
 .senha{
   display: flex;
 }
-.input_email{
-  width: 80%;
-  height: 30px;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-.input_senha{
+.input_email, .input_senha{
   width: 80%;
   height: 30px;
   padding: 5px;
@@ -91,7 +81,7 @@ a {
   height: 40px;
   color: white;
 }
-#Iconezoio{
+.revelaSenha svg{
   height: 25px;
   width: 30px;
   padding-top: 8px;
@@ -137,13 +127,10 @@ a {
   font-size: 30px;
   font-weight: bold;
   color: white;
-
 }
 .textoBoasVindas2{
   color: white;
-
 }
-
 .botaoCadastro{
   width: 82%;
   height: 45px;
@@ -160,4 +147,25 @@ a {
   font-size: 28px;
   border: 2px solid white ;
   background-color: rgb(172, 46, 0);;
+}
+
+/*Responsividade*/
+
+@media (max-width: 800px){
+  .login{
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+  .TituloSite{
+    font-size: 70px;
+  }
+  .cadastro{
+    width: 100%;
+    margin-left: 0;
+
+  }
+
 }

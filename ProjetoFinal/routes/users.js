@@ -10,5 +10,8 @@ router.get('/', (req, res) => {
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
+router.get('/cadastro', (req, res) => {
+  res.render('cadastro');
+})
 
 module.exports = router;
