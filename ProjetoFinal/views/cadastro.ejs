@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="stylesheets/Cadastro.css">
 </head>
 <body>
-    <h1 class="TituloSite">Seja bem-vindo(a)!</h1>
-        <section class="login">
+    <h1 class="TituloSite">Crie sua Conta</h1>
+        <section class="Cadastro">
 
             <div class="LoginInputs">
-
-            <h2 class="textoBoasVindasLog2">Faça seu Cadastro!</h2>
 
             <input type="text" placeholder="Nome:" class="NomeUser"  id="NomeUser">
 
@@ -20,7 +18,7 @@
 
             <section class="senha">
                 <input type="password" placeholder="Senha: " class="input_senha"  id="input_senha">
-                <button class="revelaSenha" id="RevelarSenhaButton">
+                <button class="RevelarSenhaButton" id="RevelarSenhaButton">
                 <svg xmlns="http://www.w3.org/2000/svg" id="Iconezoio" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
@@ -28,7 +26,15 @@
                 </button>
             </section>
 
-            <input type="text" placeholder="Confirmar senha:" class="ConfirmSenha"  id="ConfirmSenha">
+            <section class="senhaConfirm">
+                <input type="password" placeholder="Confirme a Senha: " class="input_senhaConfirm"  id="input_senhaConfirm">
+                <button class="RevelarSenhaButtonCONF" id="RevelarSenhaButtonCONF">
+                <svg xmlns="http://www.w3.org/2000/svg" id="IconezoioCONF" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                </svg>
+                </button>
+            </section>
 
             <button class="botaoCriarConta" id="botaoCriarConta">Vamos Começar!</button>
             </div>

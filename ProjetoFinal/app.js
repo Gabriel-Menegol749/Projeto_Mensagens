@@ -26,6 +26,10 @@ app.get('/cadastro', (req, res)=>{
   res.render('cadastro')
 })
 
+app.get('/TelaPrincipal', (req, res)=>{
+  res.render('TelaPrincipal')
+})
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

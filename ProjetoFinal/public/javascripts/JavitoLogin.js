@@ -31,10 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const valorEmail = inputEMAIL.value;
         const valorSenha = inputSenha.value;
-        if (valorEmail === '' || valorSenha === ''){
+       if (valorEmail === '' || valorSenha === ''){
             alert('Para fazer login, digite um email existente e uma senha valida');
         } else{
-            alert("conectou");
+            e.preventDefault();
+            window.open("/TelaPrincipal")
         }
     });
 

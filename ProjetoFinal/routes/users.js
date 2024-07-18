@@ -13,5 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/cadastro', (req, res) => {
   res.render('cadastro');
 })
-
+router.get('/TelaPrincipal', (req, res) => {
+  res.render('TelaPrincipal');
+})
 module.exports = router;
