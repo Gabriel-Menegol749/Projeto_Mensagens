@@ -1,1 +1,2 @@
-DROP database bancousuarios;
+USE bancousuarios;
+SHOW TABLES;

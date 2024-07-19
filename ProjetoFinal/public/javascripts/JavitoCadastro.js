@@ -8,7 +8,44 @@ const botaoRevelaConfirmSenha = document.getElementById("RevelarSenhaButtonCONF"
 
 const botaoCriarConta = document.getElementById("botaoCriarConta");
 
+const nomeUsuario = inputNome.value;
+const emailUsuario = inputEmail.value;
+const usuarioSenha = inputSenha.value;
+const senhaConfirm = inputConfirmaSenha.value;
 
+if (usuarioSenha !== senhaConfirm){
+    alert('As senhas são diferentes!');
+    return;
+}
+
+const data = {
+    nome: nome,
+    email: email,
+    senha: senha
+}
+
+const Resposta = await fetch('/users/insert-data', {
+    method: 'POST',
+    headers: {
+        'content-type': 'application/json'
+    },
+    body: JSON.stringify(data)
+});
+
+const Resultado = await Resposta.json();
+
+//abrir a tela principal, é necessário criar algumas barreiras aqui ainda
+botaoCriarConta.addEventListener('click', function(e){
+    e.preventDefault();
+    if(Resultado.success){
+     window.open("/TelaPrincipal")
+    } else{
+        alert('Erro ao cadastrar usuário: ' + Resultado.message);
+    }
+});
+
+
+//botões de revelar senhas
 RevelarSenhaButton.addEventListener('click', function(e) {
     e.preventDefault();
 
@@ -30,7 +67,7 @@ RevelarSenhaButton.addEventListener('click', function(e) {
         ;
     }
 });
-
+//botões de revelar senhas
 botaoRevelaConfirmSenha.addEventListener('click', function(e) {
     e.preventDefault();
 
@@ -51,12 +88,5 @@ botaoRevelaConfirmSenha.addEventListener('click', function(e) {
             </svg>`
         ;
     }
-
-
-
-botaoCriarConta.addEventListener('click', function(e){
-    e.preventDefault();
-     window.open("/TelaPrincipal")
-    })
-});
+})
 
