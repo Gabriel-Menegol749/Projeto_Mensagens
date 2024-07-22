@@ -22,6 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.get('/Login', (req, res)=>{
+  res.render('Login')
+})
+
 app.get('/cadastro', (req, res)=>{
   res.render('cadastro')
 })

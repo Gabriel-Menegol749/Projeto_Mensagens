@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const BancoDados = require('../routes/users.js');
 const mysql = require('mysql2/promise');
 const bodyParser = require('body-parser');
 
@@ -16,7 +15,7 @@ const pool = mysql.createPool({
 })
 
 //teste para ver se o banco ta conectado
-pool.connect((err) =>{
+pool.getConnection((err, connection) =>{
     if (err){
         console.error('Erro ao conectar ao banco de dados', err.stack);
         return;
@@ -25,11 +24,11 @@ pool.connect((err) =>{
     connection.release();
 });
 
-async function inserirUsuarios(nome,ail, senha){
+async function inserirUsuarios(nome, email, senha){
   const sql = `INSERT INTO Usuarios (NomeUsuario, emailUsuario, SenhaUsuario) VALUES (?, ?, ?)`;
   try {
     const [results] = await pool.query(sql, [nome, email,  senha]);
-    return Resultado;
+    return results;
   } catch (err) {
     throw err;
   }
@@ -53,6 +52,10 @@ router.post('/insert-data', async (req, res) =>{
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
+
+router.get('/Login', (req, res) => {
+  res.render('Login');
+})
 router.get('/cadastro', (req, res) => {
   res.render('cadastro');
 })

@@ -48,10 +48,20 @@ body::before{
     display: flex;
     flex-direction: column;
     margin: 20px;
+    background: none;
+    border: none;
 }
 .logOFF svg{
     width: 50px;
     height: 40px;
+    color: white;
+}
+.logOFF label{
+    color: white;
+    cursor: pointer;
+}
+.logOFF:hover{
+    cursor: pointer;
 }
 .conteudoPagina{
     display: flex;
@@ -104,4 +114,21 @@ body::before{
     font-size: 20px;
     font-weight: bold;
     background-color: rgb(248, 98, 43);
+}
+
+@media (max-width: 800px){
+    .MensagemUsuario p{
+        display: none;
+    }
+    .cabecalio{
+        display: flex;
+        justify-content: center;
+    }
+    .menu{
+        position: absolute;
+        left: 10px;
+    }
+    .logOFF{
+        display: none;
+    }
 }

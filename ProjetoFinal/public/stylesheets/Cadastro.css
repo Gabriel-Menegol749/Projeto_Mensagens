@@ -106,3 +106,17 @@ a {
   border: 2px solid white ;
   background-color: rgb(172, 46, 0);;
 }
+
+/*Responsividade*/
+
+@media (max-width: 800px){
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .TituloSite{
+    font-size: 60px;
+  }
+}
