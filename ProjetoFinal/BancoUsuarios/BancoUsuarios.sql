@@ -1,2 +1,0 @@
-USE bancousuarios;
-SHOW TABLES;
