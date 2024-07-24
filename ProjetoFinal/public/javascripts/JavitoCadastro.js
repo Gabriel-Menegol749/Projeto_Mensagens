@@ -22,12 +22,6 @@ document.addEventListener("DOMContentLoaded", function(){
             return;
         }
 
-        if(Resultado.success){
-            window.open("/TelaPrincipal")
-            } else{
-                console.error('Erro ao cadastrar usuário: ' + Resultado.message);
-                alert('Erro ao cadastrar o cliente, por favor, retorne mais tarde!');
-            }
     });
 
     //botões de revelar senhas

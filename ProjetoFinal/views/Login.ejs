@@ -11,16 +11,16 @@
   <h1 class="TituloSite">Seja bem-vindo(a)!</h1>
   <section class="login">
 
-    <div class="LoginInputs">
+    <form class="LoginInputs" action="/login" method="post" onsubmit="verificaInputs(this)">
 
       <h1 class="textoBoasVindasLog">Nos visitando novamente?</h1>
       <hr class="linha">
       <h2 class="textoBoasVindasLog2">Faça seu login:</h2>
 
-      <input type="text" placeholder="E-mail:" class="input_email"  id="input_email">
+      <input type="text" placeholder="E-mail:" class="input_email"  id="input_email" name="emailLogin">
 
       <section class="senha">
-        <input type="password" placeholder="Senha: " class="input_senha"  id="input_senha">
+        <input type="password" placeholder="Senha: " class="input_senha"  id="input_senha" name="senhaLogin">
         <button class="revelaSenha" id="RevelarSenhaButton">
           <svg xmlns="http://www.w3.org/2000/svg" id="Iconezoio" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
             <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
@@ -30,13 +30,13 @@
       </section>
 
       <button class="botaoLogin" id="botaoLogin">Vamos Começar!</button>
-    </div>
+    </form>
 
       <div class="cadastro">
         <h2 class="textoBoasVindas">É sua primeira vez aqui?<br></h2>
         <h2 class="textoBoasVindas2">Faça um cadastro!</h2></h2>
 
-        <button class="botaoCadastro" id="botaoCadastro">Cadastrar-se</button>
+        <a href="/Cadastro"><button class="botaoCadastro" id="botaoCadastro">Cadastrar-se</button></a>
           </div>
     </section>
 
