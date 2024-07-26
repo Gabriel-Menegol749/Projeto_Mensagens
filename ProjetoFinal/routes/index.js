@@ -15,6 +15,9 @@ router.post('/Login', (req, res) => {
 router.get('/cadastro', (req, res) => {
   res.render('cadastro');
 })
+router.post('/cadastro', (req, res) => {
+  res.redirect('/TelaPrincipal');
+})
 router.get('/TelaPrincipal', (req, res) => {
   res.render('TelaPrincipal');
 })

@@ -10,7 +10,7 @@
     <h1 class="TituloSite">Crie sua Conta</h1>
         <section class="Cadastro">
 
-            <div class="LoginInputs">
+            <form class="LoginInputs" action="/Cadastro" method="post" onsubmit="cadastrarCliente(this)">
 
             <input type="text" placeholder="Nome:" class="NomeUser"  id="NomeUser" name="nome">
 
@@ -36,10 +36,10 @@
                 </button>
             </section>
 
-            <a href=""><button class="botaoCriarConta" id="botaoCriarConta">Vamos Começar!</button></a>
-            </div>
+            <a href="/TelaPrincipal"><button class="botaoCriarConta" id="botaoCriarConta">Vamos Começar!</button></a>
+        </form>
 
-        </section>
+        </serction>
 
     <script src="/javascripts/JavitoCadastro.js"></script>
 </body>

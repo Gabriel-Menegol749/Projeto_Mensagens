@@ -9,20 +9,23 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const botaoCriarConta = document.getElementById("botaoCriarConta");
 
-    botaoCriarConta.addEventListener('click', async function(e){
-        e.preventDefault();
-
-        const nomeUsuario = inputNome.value;
-        const emailUsuario = inputEmail.value;
+    function cadastrarCliente(e){
+        const nomeUsuario = inputNome.value.trim();
+        const emailUsuario = inputEmail.value.trim();
         const usuarioSenha = inputSenha.value;
         const senhaConfirm = inputConfirmaSenha.value;
 
-        if (usuarioSenha !== senhaConfirm){
-            alert('As senhas são diferentes!');
-            return;
+        if(!emailUsuario || !usuarioSenha || !nomeUsuario || senhaConfirm) {
+            alert("Preencha todos os campos!");
+            e.preventDefault();
+            return false;
         }
-
-    });
+        if(usuarioSenha !== senhaConfirm){
+            alert('As senhas devem ser iguais!');
+            e.preventDefault();
+            return false;
+        }
+    };
 
     //botões de revelar senhas
     botaoRevelasenha.addEventListener('click', function(e) {
