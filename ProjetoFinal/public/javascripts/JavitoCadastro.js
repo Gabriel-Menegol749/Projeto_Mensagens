@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function(){
     const botaoCriarConta = document.getElementById("botaoCriarConta");
 
     function cadastrarCliente(e){
+        e.preventDefault();
+
         const nomeUsuario = inputNome.value.trim();
         const emailUsuario = inputEmail.value.trim();
         const usuarioSenha = inputSenha.value;
@@ -25,7 +27,10 @@ document.addEventListener("DOMContentLoaded", function(){
             e.preventDefault();
             return false;
         }
+        e.target.submit();
     };
+
+    document.querySelector('form').addEventListener('submit', cadastrarCliente);
 
     //botões de revelar senhas
     botaoRevelasenha.addEventListener('click', function(e) {
