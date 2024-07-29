@@ -24,10 +24,5 @@ module.exports = (sequelize) => {
     timestamps: false,
   });
 
-  Usuario.associate = function(models) {
-    Usuario.hasMany(models.Info_Usuarios, { foreignKey: 'ID_Usuario' });
-    Usuario.hasMany(models.Comentarios, { foreignKey: 'ID_Usuario' });
-  };
-
   return Usuario;
 };
