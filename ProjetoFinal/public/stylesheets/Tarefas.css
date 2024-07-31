@@ -6,11 +6,12 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 body::before{
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -66,14 +67,32 @@ body::before{
     width: 40px;
     height: 70px;
 }
+
+.LogOFF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;   
+}
+.LogOFF:hover {
+    cursor: pointer;
+}
+.LogOFF svg{
+    width: 40px;
+    height: 50px;
+    background: none;
+    border: none;   
+}
 .projetos {
     display: flex;
     align-items: center;
     background-color: white;
     margin: 20px;
     border-radius: 50px;
-    height: 500px;
-    width: 1250px;
+    height: 100%;
+    width: 100%;
 }
 .fotocalendario{
 
@@ -159,4 +178,41 @@ body::before{
     border-radius: 15px;
     font-size: 20px;
     margin-top: 5px;
+}
+
+/*Responsividade*/
+@media (max-width: 800px) {
+
+    /*Cabeçalho*/
+    .notnomperf{
+        display: none;
+    }
+    .dataeHora{
+        display: none;
+    }
+    .profilepicture{
+        display: none;
+    }
+    .notificacao{
+        display: none;
+    }
+    .LogOFF{
+        display: none;
+    }
+    .cabecalio{
+        width: 100%;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    
+    .projetos{
+        display: flex;
+        flex-direction: column;
+    }
+    .tarefasCriadas{
+        width: 80%;
+    }
+    .tarefas{
+        width: 100%;
+    }
 }

@@ -6,11 +6,12 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 body::before{
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -60,6 +61,25 @@ body::before{
 .profilepicture svg{
     width: 40px;
     height: 70px;
+}
+
+
+.LogOFF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;   
+}
+.LogOFF:hover {
+    cursor: pointer;
+}
+.LogOFF svg{
+    width: 40px;
+    height: 50px;
+    background: none;
+    border: none;   
 }
 
 .conteudoPagina{
@@ -127,14 +147,36 @@ body::before{
     color: white;
     cursor: pointer;
 }
-@media (max-width: 800px){
 
-    .cabecalio{
-        display: flex;
-        justify-content: center;
+/*Responsividade*/
+@media (max-width: 800px) {
+
+    /*Cabeçalho*/
+    .notnomperf{
+        display: none;
     }
+    .dataeHora{
+        display: none;
+    }
+    .profilepicture{
+        display: none;
+    }
+    .notificacao{
+        display: none;
+    }
+    .cabecalio{
+        width: 100%;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
     .conteudoPagina{
         display: flex;
+        flex-direction: column;
+    }
+
+    .projetosAnteriores{
+        width: 60%;
     }
 
 }

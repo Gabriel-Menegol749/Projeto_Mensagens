@@ -67,6 +67,24 @@ body::before{
     height: 70px;
 }
 
+.LogOFF {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+}
+.LogOFF:hover {
+    cursor: pointer;
+}
+.LogOFF svg{
+    width: 40px;
+    height: 50px;
+    background: none;
+    border: none;
+}
+
 .telaNovaTef{
     padding: 20px 0px 20px 20px;
     display: flex;
@@ -86,14 +104,12 @@ body::before{
 .fotocalendario img{
     width: 80%;
     height: 60vh;
-
 }
 .telaNovaTef{
     background-color: rgb(207, 207, 207);
     margin: 20px;
     border-radius: 15px;
     margin-top: 8vh;
-    
 }
 
 .inputsTarefa{
@@ -113,7 +129,7 @@ body::before{
     border-radius: 20px;
 
 }
-.inputsTarefa .Description{   
+.inputsTarefa .Description{
     height: 12vh;
 }
 .criarTarefa{
@@ -123,4 +139,49 @@ body::before{
     font-size: 20px;
     border: 2px solid black;
     border-radius: 20px;
+}
+
+@media (max-width: 800px){
+     /*Cabeçalho*/
+     .notnomperf{
+        display: none;
+    }
+    .dataeHora{
+        display: none;
+    }
+    .profilepicture{
+        display: none;
+    }
+    .notificacao{
+        display: none;
+    }
+    .cabecalio{
+        width: 100%;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .telaNovaTef{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fotocalendario{
+        width: 80%;
+        margin: 20px;
+
+    }
+    .fotocalendario img{
+        width: 80%;
+        height: 60vh;
+    }
+    .inputsTarefa{
+        width: 100%;
+        padding-left: 40px;
+    }
+    .inputsTarefa input{
+        width: 90%;
+    }
+    .criarTarefa{
+        width: 40%;
+    }
 }
