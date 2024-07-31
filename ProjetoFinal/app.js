@@ -5,33 +5,36 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-const ROTASUsuarios = require('./routes/Usuarios');
 
 const app = express();
 
+
+//configuração da view engine e pasta de views
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+//configuração para trabalhar com fomrs
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//uso de logger (mensagens de log no terminal)
 app.use(logger('dev'));
 
+
+//trabalhar com form, enviar o form em forma de json
+//facilitando processos post, req e body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 
 app.use(cookieParser());
 
-
+//configurar pasta public para dar acesso ao usuário do site
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Rotas
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/', ROTASUsuarios);
-
 
 app.use(function(req, res, next) {
   next(createError(404));

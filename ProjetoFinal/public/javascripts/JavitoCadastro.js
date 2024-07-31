@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function showError(message) {
-        // Exibir uma mensagem de erro no DOM, próximo ao formulário ou aos campos
-        alert(message); // Alterar para exibir a mensagem no DOM em uma versão real
+        alert(message); 
     }
 
     function validateEmail(email) {

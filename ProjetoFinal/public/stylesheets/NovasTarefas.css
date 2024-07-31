@@ -40,6 +40,11 @@ body::before{
     width: 50px;
     height: 70px;
 }
+.menu button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
 .notnomperf{
     display: flex;
     justify-content: center;
@@ -62,79 +67,60 @@ body::before{
     height: 70px;
 }
 
-.conteudoPagina{
+.telaNovaTef{
+    padding: 20px 0px 20px 20px;
     display: flex;
-    height: 80vh;
-    color: white;
-    margin: 10px;
-
+    align-items: center;
 }
-.conteudoDireito{
-    width: 80%;
-}
-.textos{
-    margin: 20px;
-    margin-top: 5vh;
-    width: 90%;
-}
-.textoApresentacao{
-    font-size: 80px;
-}
-.mensagem{
-    font-size: 25px;
-    margin-top: 8vh;
-    margin-bottom: 8vh;
-}
-.novoProjeto{
-    width: 60%;
-    height:8vh;
-    font-size: 25px;
+.fotocalendario{
+    width: 40%;
+    height: 60vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 2px;
     background-color: white;
-    color: black;
-    border-radius: 20px;
-    text-align: left;
-    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.novoProjeto:hover{
-    cursor: pointer;
+.fotocalendario img{
+    width: 80%;
+    height: 60vh;
+
+}
+.telaNovaTef{
+    background-color: rgb(207, 207, 207);
+    margin: 20px;
+    border-radius: 15px;
+    margin-top: 8vh;
+    
 }
 
-.projetosAnteriores{
-    margin-top: 20vh;
-    width: 20%;
-    height: 5vh;
-    padding: 10px;
+.inputsTarefa{
+    width: 60%;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    padding-left: 10vh;
 }
-.projetosAnteriores div{
-    border: 2px solid white;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-.nomeTarefa1{
-    font-size: 25px;
+.inputsTarefa input{
+    margin-bottom: 30px;
     padding: 5px;
-}
-.descricaoTaref{
+    width: 90%;
+    height: 7vh;
     font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
 
 }
-.projetosAnteriores button {
-    border: none;
-    background: none;
-    color: white;
-    cursor: pointer;
+.inputsTarefa .Description{   
+    height: 12vh;
 }
-@media (max-width: 800px){
-
-    .cabecalio{
-        display: flex;
-        justify-content: center;
-    }
-    .conteudoPagina{
-        display: flex;
-    }
-
+.criarTarefa{
+    width: 20%;
+    padding: 5px;
+    height: 8vh;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
 }

@@ -1,7 +1,14 @@
-const { DataTypes } = require('sequelize');
+const { Sequelize, DataTypes} = require('sequelize')
 
-module.exports = (sequelize) => {
-  const Usuario = sequelize.define('Usuario', {
+//fazendo a conexão entre js e mysql existente no sistema
+
+//configuração do sequelize para acessar o banco desejado
+const sequelize = new Sequelize('bancousuarios', 'root', '', {
+  dialect: 'mysql',
+});
+
+//configurando uma nova tabela no sql
+const Usuario = sequelize.define('Usuario', {
     ID_Usuario: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -24,5 +31,8 @@ module.exports = (sequelize) => {
     timestamps: false,
   });
 
-  return Usuario;
-};
+
+
+  //exporta a variavel de acesso acima para o banco de dados.
+  module.exports = Usuario;
+
