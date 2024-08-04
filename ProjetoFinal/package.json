@@ -11,7 +11,7 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "morgan": "^1.10.0",
-    "mysql2": "^3.10.3",
+    "mysql2": "^3.11.0",
     "projetofinal": "file:",
     "sequelize": "^6.37.3",
     "sequelize-cli": "^6.6.2"

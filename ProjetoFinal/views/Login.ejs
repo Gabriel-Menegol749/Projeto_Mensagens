@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comments! Login</title>
@@ -10,15 +9,11 @@
 <body>
   <h1 class="TituloSite">Seja bem-vindo(a)!</h1>
   <section class="login">
-
     <form class="LoginInputs" action="/login" method="post" onsubmit="verificaInputs(this)">
-
       <h1 class="textoBoasVindasLog">Nos visitando novamente?</h1>
       <hr class="linha">
       <h2 class="textoBoasVindasLog2">Faça seu login:</h2>
-
       <input type="text" placeholder="E-mail:" class="input_email"  id="input_email" name="emailLogin">
-
       <section class="senha">
         <input type="password" placeholder="Senha: " class="input_senha"  id="input_senha" name="senhaLogin">
         <button class="revelaSenha" id="RevelarSenhaButton">
@@ -28,19 +23,14 @@
           </svg>
         </button>
       </section>
-
       <button class="botaoLogin" id="botaoLogin">Vamos Começar!</button>
     </form>
-
-      <div class="cadastro">
-        <h2 class="textoBoasVindas">É sua primeira vez aqui?<br></h2>
-        <h2 class="textoBoasVindas2">Faça um cadastro!</h2></h2>
-
-        <a class="botaoCadastroLink" href="/Cadastro"><button class="botaoCadastro" id="botaoCadastro">Cadastrar-se</button></a>
-          </div>
-    </section>
-
-    <script src="/javascripts/JavitoLogin.js"></script>
+    <div class="cadastro">
+      <h2 class="textoBoasVindas">É sua primeira vez aqui?<br></h2>
+      <h2 class="textoBoasVindas2">Faça um cadastro!</h2></h2>
+      <a class="botaoCadastroLink" href="/Cadastro"><button class="botaoCadastro" id="botaoCadastro">Cadastrar-se</button></a>
+    </div>
+  </section>
+  <script src="/javascripts/JavitoLogin.js"></script>
 </body>
 </html>
-

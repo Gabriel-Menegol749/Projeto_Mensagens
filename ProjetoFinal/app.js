@@ -10,6 +10,8 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+
 // Configuração para trabalhar com forms
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -25,6 +27,9 @@ app.use(cookieParser());
 
 // Configurar pasta public para dar acesso ao usuário do site
 app.use(express.static(path.join(__dirname, 'public')));
+
+//arquivo desconhecido que não foi encontrado e não conseguia ser utilizado no sistema
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 // Rotas
 app.use('/', indexRouter);
