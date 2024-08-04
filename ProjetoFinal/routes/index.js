@@ -3,8 +3,6 @@ var router = express.Router();
 const app = express();
 app.use(express.json());
 
-const usuarios = require("../config/Database");
-
 //Essa parte do sistema serve para definir minhas rotas, metodos get e post e para definir aonde o meu sistema deve ir
 
 /* GET home page. */
