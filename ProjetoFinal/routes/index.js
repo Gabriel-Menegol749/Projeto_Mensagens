@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const usuarios = require("../models/UsuariosBANCO");
+const app = express();
+app.use(express.json());
+
+const usuarios = require("../config/Database");
+
+//Essa parte do sistema serve para definir minhas rotas, metodos get e post e para definir aonde o meu sistema deve ir
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -64,4 +69,5 @@ router.get('/Tarefa', (req, res) => {
 router.get('/novasTarefas', (req, res) => {
   res.render('novasTarefas');
 });
+
 module.exports = router;
