@@ -1,5 +1,5 @@
 # Projeto_Mensagens
-Projeto criado em colaboração com a faculdade. 
+Projeto criado em colaboração com a faculdade.
 
 
 Este projeto tem como objetivo criar um sistema que possui componentes front-end (utlizando html, css e JavaScript)
