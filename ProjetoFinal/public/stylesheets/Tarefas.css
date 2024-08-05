@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
     position: relative;
+    background-color: black;
 }
 
 body::before{
@@ -84,6 +85,9 @@ body::before{
     height: 50px;
     background: none;
     border: none;   
+}
+.menuLateral{
+    display: none;
 }
 .projetos {
     display: flex;
@@ -183,36 +187,78 @@ body::before{
 /*Responsividade*/
 @media (max-width: 800px) {
 
-    /*Cabeçalho*/
-    .notnomperf{
-        display: none;
-    }
-    .dataeHora{
-        display: none;
-    }
-    .profilepicture{
-        display: none;
-    }
-    .notificacao{
-        display: none;
-    }
-    .LogOFF{
-        display: none;
-    }
-    .cabecalio{
-        width: 100%;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    
-    .projetos{
-        display: flex;
+.notnomperf,
+.dataeHora,
+.profilepicture,
+.notificacao,
+.menuLateral {
+    display: none;
+}
+
+.cabecalio{
+    width: 92%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+    .menuLateral{
+        margin-top: 10px;
+        position: fixed;
+        top: 0;
+        left: 10px;
+        width: 400px;
+        height: 99%;
+        background-color:rgb(207, 207, 207);;
+        border: 8px solid #808080;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding-top: 20px;
+        padding: 10px;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
-    .tarefasCriadas{
-        width: 80%;
+    .menuLateral div{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
     }
-    .tarefas{
-        width: 100%;
+    .menuLateral div svg{
+        width: 35px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
     }
+    .menuLateral div label{
+        margin-left: 15px;
+    }
+
+    .menuLateral .returnTelaPrincipal .menu{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .logoff{
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+    }
+    .logoff label{
+        padding-left: 5px;
+    }
+
+.projetos{
+    display: flex;
+    flex-direction: column;
+}
+.tarefasCriadas{
+    width: 80%;
+}
+.tarefas{
+    width: 100%;
+}
 }

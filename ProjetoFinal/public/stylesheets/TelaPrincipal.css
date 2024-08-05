@@ -7,6 +7,7 @@ body{
     margin: 0;
     padding: 0;
     position: relative;
+    background-color: black;
 }
 
 body::before{
@@ -36,6 +37,7 @@ body::before{
 }
 .menu{
     margin-left: 20px;
+    margin-right: 20px;
 }
 .menu svg{
     width: 50px;
@@ -69,8 +71,9 @@ body::before{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-items: center;
     background: none;
-    border: none;   
+    border: none;
 }
 .LogOFF:hover {
     cursor: pointer;
@@ -79,9 +82,13 @@ body::before{
     width: 40px;
     height: 50px;
     background: none;
-    border: none;   
+    border: none;
 }
-
+/*Configurações do aside do menu responsivo*/
+.menuLateral{
+    display: none;
+}
+/*Fim do aside*/
 .conteudoPagina{
     display: flex;
     height: 80vh;
@@ -151,32 +158,71 @@ body::before{
 /*Responsividade*/
 @media (max-width: 800px) {
 
-    /*Cabeçalho*/
-    .notnomperf{
-        display: none;
-    }
-    .dataeHora{
-        display: none;
-    }
-    .profilepicture{
-        display: none;
-    }
-    .notificacao{
-        display: none;
-    }
-    .cabecalio{
-        width: 100%;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
+/*Cabeçalho*/
+.notnomperf,
+.dataeHora,
+.profilepicture,
+.notificacao,
+.menuLateral {
+    display: none;
+}
 
-    .conteudoPagina{
-        display: flex;
+.cabecalio{
+    width: 92%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+    .menuLateral{
+        margin-top: 10px;
+        position: fixed;
+        top: 0;
+        left: 10px;
+        width: 250px;
+        height: 99%;
+        background-color:rgb(207, 207, 207);;
+        border: 8px solid #808080;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding-top: 20px;
+        padding: 10px;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .menuLateral div{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+    }
+    .menuLateral div svg{
+        width: 35px;
+        height: 50px;
+    }
+    .menuLateral div label{
+        margin-left: 15px;
     }
 
-    .projetosAnteriores{
-        width: 60%;
+
+    .logoff{
+        display: flex;
+        font-size: 20px;
+        align-items: center;
     }
+    .logoff label{
+        padding-left: 5px;
+    }
+
+.conteudoPagina{
+    display: flex;
+    flex-direction: column;
+}
+
+.projetosAnteriores{
+    width: 60%;
+}
 
 }

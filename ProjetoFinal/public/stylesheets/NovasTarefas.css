@@ -6,6 +6,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 body::before{
@@ -84,7 +85,9 @@ body::before{
     background: none;
     border: none;
 }
-
+.menuLateral{
+    display: none;
+}
 .telaNovaTef{
     padding: 20px 0px 20px 20px;
     display: flex;
@@ -110,6 +113,7 @@ body::before{
     margin: 20px;
     border-radius: 15px;
     margin-top: 8vh;
+    border: 2px solid black;
 }
 
 .inputsTarefa{
@@ -133,55 +137,98 @@ body::before{
     height: 12vh;
 }
 .criarTarefa{
-    width: 20%;
+    width: 30%;
     padding: 5px;
     height: 8vh;
     font-size: 20px;
     border: 2px solid black;
     border-radius: 20px;
 }
+/*Responsividade*/
+@media (max-width: 800px) {
+.notnomperf,
+.dataeHora,
+.profilepicture,
+.notificacao,
+.menuLateral {
+display: none;
+}
 
-@media (max-width: 800px){
-     /*Cabeçalho*/
-     .notnomperf{
-        display: none;
-    }
-    .dataeHora{
-        display: none;
-    }
-    .profilepicture{
-        display: none;
-    }
-    .notificacao{
-        display: none;
-    }
-    .cabecalio{
-        width: 100%;
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    .telaNovaTef{
-        display: flex;
-        flex-direction: column;
-    }
+.cabecalio{
+width: 92%;
+margin-right: 30px;
+margin-left: 30px;
+}
+.menuLateral{
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 10px;
+    width: 400px;
+    height: 99%;
+    background-color:rgb(207, 207, 207);;
+    border: 8px solid #808080;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.menuLateral div{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.menuLateral div svg{
+    width: 35px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+.menuLateral div label{
+    margin-left: 15px;
+}
+.menuLateral .returnTelaPrincipal .menu{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.logoff{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+}
+.logoff label{
+    padding-left: 5px;
+}
 
-    .fotocalendario{
-        width: 80%;
-        margin: 20px;
+.telaNovaTef{
+display: flex;
+flex-direction: column;
+}
 
-    }
-    .fotocalendario img{
-        width: 80%;
-        height: 60vh;
-    }
-    .inputsTarefa{
-        width: 100%;
-        padding-left: 40px;
-    }
-    .inputsTarefa input{
-        width: 90%;
-    }
-    .criarTarefa{
-        width: 40%;
-    }
+.fotocalendario{
+    width: 80%;
+    margin: 20px;
+
+}
+.fotocalendario img{
+    width: 80%;
+    height: 60vh;
+}
+.inputsTarefa{
+    width: 100%;
+    padding-left: 40px;
+}
+.inputsTarefa input{
+    width: 90%;
+}
+.criarTarefa{
+    width: 40%;
+}
 }
