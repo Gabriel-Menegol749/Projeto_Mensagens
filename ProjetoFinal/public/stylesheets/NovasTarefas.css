@@ -116,6 +116,7 @@ body::before{
     border: 2px solid black;
 }
 
+
 .inputsTarefa{
     width: 60%;
     display: flex;
@@ -136,6 +137,9 @@ body::before{
 .inputsTarefa .Description{
     height: 12vh;
 }
+.botoes{
+    display: flex;
+}
 .criarTarefa{
     width: 30%;
     padding: 5px;
@@ -143,6 +147,15 @@ body::before{
     font-size: 20px;
     border: 2px solid black;
     border-radius: 20px;
+}
+.VoltarTelaTarefa{
+    width: 30%;
+    padding: 5px;
+    height: 8vh;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 10px;
 }
 /*Responsividade*/
 @media (max-width: 800px) {

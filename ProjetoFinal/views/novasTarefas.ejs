@@ -91,11 +91,18 @@
         <div class="fotocalendario"><img src="images/fotoCalendario.png" width="450" height="450"></div>
 
         <form action="/Tarefa" method="get" class="inputsTarefa">
-            <input type="text" placeholder="Titulo da Tarefa:" name="TituloTarefa">
-            <input type="text" placeholder="Categoria: " name="Categoria">
-            <input type="text" placeholder="Data: __/__/__ e Horario: " name="DataeHora">
-            <input type="text" placeholder="Descrição da Tarefa:" name="Description" class="Description">
-            <button class="criarTarefa">Criar Tarefa +</button>
+                <input type="text" placeholder="Titulo da Tarefa:" name="TituloTarefa">
+                <input type="text" placeholder="Categoria: " name="Categoria">
+                <input type="text" placeholder="Data: __/__/__ e Horario: " name="DataeHora">
+                <input type="text" placeholder="Descrição da Tarefa:" name="Description" class="Description">
+                <div class="botoes">
+                    <button class="criarTarefa">Criar Tarefa +</button>
+                    <form action="/Tarefa" method="get" class="inputsTarefa">
+                        <button class="VoltarTelaTarefa">Voltar</button>
+                    </form>
+
+                </div>
+
         </form>
     </section>
 
