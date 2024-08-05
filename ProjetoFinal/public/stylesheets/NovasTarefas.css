@@ -93,20 +93,33 @@ body::before{
     display: flex;
     align-items: center;
 }
-.fotocalendario{
-    width: 40%;
-    height: 60vh;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-top: 2px;
+.calendario {
+    width: 500px;
+    height: 250px;
+    border: 2px solid #000000;
+    border-radius: 5px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
 }
-.fotocalendario img{
-    width: 80%;
-    height: 60vh;
+
+.calendario .header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendario .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.calendario .day {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 .telaNovaTef{
     background-color: rgb(207, 207, 207);
@@ -225,17 +238,29 @@ display: flex;
 flex-direction: column;
 }
 
-.fotocalendario{
-    width: 80%;
-    margin: 20px;
-
+.calendario {
+    margin-top: 30px;
+    width: 400px;
+    height: 250px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
 }
-.fotocalendario img{
-    width: 80%;
-    height: 60vh;
+.botoes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.botoes button{
+    margin: 0;
+    width: 92%;
 }
 .inputsTarefa{
-    width: 100%;
+    margin-top: 30px;
+    width: 80%;
     padding-left: 40px;
 }
 .inputsTarefa input{

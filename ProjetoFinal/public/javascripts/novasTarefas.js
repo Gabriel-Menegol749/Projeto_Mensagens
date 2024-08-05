@@ -1,3 +1,45 @@
+//tentativa calendario
+document.addEventListener('DOMContentLoaded', () => {
+    function createCalendar() {
+        const calendar = document.getElementById('calendario');
+        const date = new Date();
+        const month = date.getMonth();
+        const year = date.getFullYear();
+
+        // Nomes dos dias da semana
+        const daysOfWeek = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+
+        // Primeiro dia do mês
+        const firstDay = new Date(year, month, 1).getDay();
+        // Total de dias no mês
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Cabeçalho do calendário
+        let html = '<div class="header">' + (date.toLocaleDateString('pt-BR', { month: 'long' })) + ' ' + year + '</div>';
+        html += '<div class="days">';
+        // Cabeçalhos dos dias da semana
+        daysOfWeek.forEach(day => {
+            html += '<div class="day">' + day + '</div>';
+        });
+
+        // Espaços em branco para alinhar o primeiro dia
+        for (let i = 0; i < firstDay; i++) {
+            html += '<div class="day"></div>';
+        }
+
+        // Dias do mês
+        for (let day = 1; day <= daysInMonth; day++) {
+            html += '<div class="day">' + day + '</div>';
+        }
+
+        html += '</div>';
+        calendar.innerHTML = html;
+    }
+
+    createCalendar();
+});
+
+
 function atualizaHoraData() {
     const agora = new Date();
     const opcoes = {

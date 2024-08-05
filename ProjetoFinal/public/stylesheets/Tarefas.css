@@ -100,18 +100,47 @@ body::before{
     width: 96%;
     padding: 10px;
 }
-.fotocalendario{
-    border-radius: 10px;
-    margin-top: 2px;
+.calendario {
+    width: 500px;
+    height: 250px;
+    border: 2px solid #000000;
+    border-radius: 5px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
+    font-family: Arial, sans-serif;
 }
-.fotocalendario img{
-    width: 80%;
-    height: 60vh;
+
+.calendario .header {
+    text-align: center;
+    font-weight: bold;
 }
+
+.calendario .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.calendario .day {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.day {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.today {
+    background-color: #b3e0ff;
+    font-weight: bold;
+}
+
 .calendario_Botoes img {
     border: 3px solid black;
     border-radius: 15px;
@@ -133,7 +162,7 @@ body::before{
 }
 
 .categorias button {
-    width: 250px;
+    width: 530px;
     height: 50px;
     background-color: white;
     border-radius: 15px;
@@ -157,14 +186,24 @@ body::before{
     border-radius: 10px;
     margin: 0;
     border: 2px solid black;
-    
+    overflow: auto;
 }
+.tarefas {
+    color: white;
+    background-color: crimson;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 15px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 
 .tarefas_Botoes {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .botaoCriaTarefa{
@@ -177,16 +216,6 @@ body::before{
     margin-top: 5px;
 }
 
-.tarefas {
-    color: white;
-    background-color: crimson;
-    font-size: 20px;
-    border: 3px solid black;
-    border-radius: 15px;
-    height: 100px;
-    padding: 10px;
-    border-radius: 20px;
-}
 
 
 /*Responsividade*/
@@ -256,6 +285,26 @@ body::before{
         padding-left: 5px;
     }
 
+.projetos {
+    width: 92%;
+    margin-left: 20px;
+}
+
+.calendario {
+    margin-top: 30px;
+    width: 400px;
+    height: 250px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+
+.categorias button {
+    width: 400px;
+}
 .projetos{
     display: flex;
     flex-direction: column;
@@ -264,6 +313,7 @@ body::before{
     width: 100%;
     padding: 10px;
     margin: 30px;
+    overflow: auto;
 }
 .tarefas{
     width: 94%;
