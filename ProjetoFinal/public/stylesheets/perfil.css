@@ -104,6 +104,59 @@ button.perfilUser {
     border: none;
 }
 
+/*Conteudo site perfil*/
+.informacoesUser{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    height: 70vh;
+    margin: 30px;
+    border-radius: 10px;
+}
+.dadosUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    height: 75vh;
+    font-size: 30px;
+}
+.nomeUser{
+    display: flex;
+    align-items: center;
+}
+.nomeUser label {
+    margin-left: 20px;
+}
+.emailUser{
+    display: flex;
+    align-items: center;
+}
+.emailUser label {
+    margin-left: 20px;
+}
+.senhaUser{
+    display: flex;
+    align-items: center;
+}
+.senhaUser label{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.botoesAlteradados button{
+    margin-top: 8vh;
+    background-color: white;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+
 /*Configurações do aside do menu responsivo*/
 .menuLateral{
     display: none;

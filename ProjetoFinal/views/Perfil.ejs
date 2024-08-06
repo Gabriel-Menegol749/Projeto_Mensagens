@@ -90,11 +90,25 @@
 
     <div class="informacoesUser">
         <div class="dadosUser">
-            <label for="" class="nomeUser"></label>
-            <label for="" class="emailUser"></label>
+            <div class="nomeUser">
+                <p>Nome do Usuário: </p>
+                <label for="" class="nomeUser">Nome_Usario</label>
+            </div>
+
+            <div class="emailUser">
+                <p>Email do Usuário: </p>
+                <label for="" class="emailUser">Email_Usuario@gmail.com</label>
+            </div>
+
             <div class="senhaUser">
-                <label for="" class="senhaUser"></label>
-                <button class="revelasenha"></button>
+                <p>Senha do Usuário:</p>
+                <label for="" class="senhaUser">SenhaUsuario</label>
+                <button class="revelaSenha" id="RevelarSenhaButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="Iconezoio" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                    </svg>
+                  </button>
             </div>
             <div class="botoesAlteradados">
                 <button class="editarInfos">Editar Informações</button>
