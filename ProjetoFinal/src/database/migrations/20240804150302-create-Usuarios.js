@@ -1,5 +1,7 @@
 'use strict';
 
+const database = require('../../config/database');
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   //no metodo up, vamos colocar o que vai ser criado, uma tabela, coluna, linha, etc, se formos mudar ou adicionar algo na tabela
@@ -40,6 +42,6 @@ module.exports = {
 
   //no metodo down, vamos colocar o que vai ser desfeito o que foi realizado no metodo up
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('Usuario');
+
   }
 };

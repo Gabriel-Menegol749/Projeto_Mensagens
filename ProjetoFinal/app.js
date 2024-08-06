@@ -3,15 +3,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
+
 var indexRouter = require('./routes/index');
-const connection = require('./src/config/database');
 const app = express();
 
 // Configuração da view engine e pasta de views
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-
 
 // Configuração para trabalhar com forms
 app.use(bodyParser.urlencoded({ extended: false }));

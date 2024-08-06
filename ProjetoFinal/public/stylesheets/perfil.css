@@ -43,11 +43,6 @@ body::before{
     width: 50px;
     height: 70px;
 }
-.menu button{
-    cursor: pointer;
-    border: none;
-    background: none;
-}
 .notnomperf{
     display: flex;
     justify-content: center;
@@ -71,6 +66,7 @@ button.perfilUser {
     padding: 0;
     cursor: pointer;
 }
+
 /* Estilo da imagem de perfil */
 .profilepicture {
     display: flex;
@@ -107,138 +103,11 @@ button.perfilUser {
     background: none;
     border: none;
 }
+
+/*Configurações do aside do menu responsivo*/
 .menuLateral{
     display: none;
 }
-
-.projetos {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    margin: 20px;
-    border-radius: 50px;
-    height: 100%;
-    width: 96%;
-    padding: 10px;
-}
-.calendario {
-    width: 500px;
-    height: 250px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-}
-
-.calendario .header {
-    text-align: center;
-    font-weight: bold;
-}
-
-.calendario .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin-top: 10px;
-}
-
-.calendario .day {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.day {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.today {
-    background-color: #b3e0ff;
-    font-weight: bold;
-}
-
-.calendario_Botoes img {
-    border: 3px solid black;
-    border-radius: 15px;
-    width: 250px;
-    height: 250px;
-}
-
-.calendario_Botoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-}
-
-.categorias {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.categorias button {
-    width: 530px;
-    height: 50px;
-    background-color: white;
-    border-radius: 15px;
-    margin-top: 10px;
-    border: 3px solid black;
-    border-radius: 15px;
-    font-size: 20px;
-}
-
-.tarefas_Botoes {
-    display: flex;
-    flex-direction: column;
-}
-
-.tarefasCriadas {
-    height: 60vh;
-    width: 100vh;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 0;
-    border: 2px solid black;
-    overflow: auto;
-}
-.tarefas {
-    color: white;
-    background-color: crimson;
-    font-size: 20px;
-    border: 3px solid black;
-    border-radius: 15px;
-    height: 100px;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-
-.tarefas_Botoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.botaoCriaTarefa{
-    background-color: rgb(95, 216, 216);
-    width: 150px;
-    height: 60px;
-    border: 3px solid black;
-    border-radius: 15px;
-    font-size: 20px;
-    margin-top: 5px;
-}
-
-
-
 /*Responsividade*/
 @media (max-width: 800px) {
 
@@ -254,6 +123,10 @@ button.perfilUser {
     width: 92%;
     margin-right: 30px;
     margin-left: 30px;
+}
+.menu button{
+    border: none;
+    background: none;
 }
     .menuLateral{
         margin-top: 10px;
@@ -306,37 +179,4 @@ button.perfilUser {
         padding-left: 5px;
     }
 
-.projetos {
-    width: 92%;
-    margin-left: 20px;
-}
-
-.calendario {
-    margin-top: 30px;
-    width: 400px;
-    height: 250px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-}
-
-
-.categorias button {
-    width: 400px;
-}
-.projetos{
-    display: flex;
-    flex-direction: column;
-}
-.tarefasCriadas{
-    width: 100%;
-    padding: 10px;
-    margin: 30px;
-    overflow: auto;
-}
-.tarefas{
-    width: 94%;
-}
 }

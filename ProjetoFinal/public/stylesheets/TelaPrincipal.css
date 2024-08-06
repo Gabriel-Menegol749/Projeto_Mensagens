@@ -57,14 +57,33 @@ body::before{
     width: 30px;
     height: 70px;
 }
-.profilepicture {
-    margin-right: 30px;
-}
-.profilepicture svg{
-    width: 40px;
-    height: 70px;
+
+button.perfilUser {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
 }
 
+/* Estilo da imagem de perfil */
+.profilepicture {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+
+/* Estilo do label */
+.nomeUsuario {
+    margin-right: 8px;
+}
+
+/* Estilo do ícone SVG */
+.profilepicture svg {
+    width: 40px;
+    height: 40px;
+}
 
 .LogOFF {
     display: flex;
@@ -84,6 +103,7 @@ body::before{
     background: none;
     border: none;
 }
+
 /*Configurações do aside do menu responsivo*/
 .menuLateral{
     display: none;

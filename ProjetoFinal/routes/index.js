@@ -1,32 +1,70 @@
 var express = require('express');
 var router = express.Router();
 const app = express();
-const UserController = require('../src/controllers/usercontroller');
-require('../src/config/database');
 app.use(express.json());
+const usersController = require('../src/controllers/usercontroller')
 
 
-// Rotas
-router.get('/usuarios', UserController.index);
-
-
-router.get('/', (req, res) => res.render('Login'));
-
-router.get('/Login', (req, res) => res.render('Login'));
-
-router.post('/Login', async (req, res) => {
-    res.redirect('/TelaPrincipal');
+/* GET home page. */
+// Página inicial
+router.get('/', (req, res) => {
+  res.render('Login');
 });
 
-router.get('/cadastro', (req, res) => res.render('cadastro'));
+// Rotas de login
+router.get('/Login', (req, res) => {
+  res.render('Login');
+});
 
-router.post('/cadastro', (req, res) => res.redirect('/TelaPrincipal'));
+router.post('/Login', (req, res) => {
+  res.redirect('/TelaPrincipal');
+});
 
-router.get('/TelaPrincipal', (req, res) => res.render('TelaPrincipal'));
+// Rotas de cadastro
+router.get('/cadastro', (req, res) => {
+  res.render('cadastro');
+});
 
-router.get('/novasTarefas', (req, res) => res.render('novasTarefas'));
+router.post('/cadastro', async (req, res) => {
+  try {
+    const result = await usersController.store(req, res);
+    if (result) {
+      res.redirect('/TelaPrincipal');
+    } else {
+      res.status(500).send('Erro ao cadastrar usuário');
+    }
+  } catch (error) {
+    console.error('Erro ao cadastrar usuário:', error);
+    res.status(500).send('Erro ao cadastrar usuário');
+  }
+});
 
-router.get('/Tarefas', (req, res) => res.render('Tarefas'));
+// Tela principal
+router.get('/TelaPrincipal', (req, res) => {
+  res.render('TelaPrincipal');
+});
 
-router.get('/Tarefa', (req, res) => res.render('Tarefa'));
+
+//telaperfil
+
+router.get('/Perfil', (req, res) => {
+  res.render('Perfil');
+});
+
+
+// Rotas para novas tarefas
+router.get('/novasTarefas', (req, res) => {
+  res.render('novasTarefas');
+});
+
+// Rotas para tarefas
+router.get('/Tarefas', (req, res) => {
+  res.render('Tarefas');
+});
+
+// Rotas para tarefas específicas (se necessário)
+router.get('/Tarefa', (req, res) => {
+  res.render('Tarefa');
+});
+
 module.exports = router;

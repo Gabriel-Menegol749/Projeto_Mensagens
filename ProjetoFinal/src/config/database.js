@@ -4,8 +4,4 @@ module.exports = {
   username: "root",
   password: "",
   database: "bancoUsuarios",
-  define: {
-    timestamps: true,
-    underscored: true,
-  },
 };
