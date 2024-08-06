@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
+const connection = require('./src/config/database');
 const app = express();
 
 // Configuração da view engine e pasta de views
