@@ -85,24 +85,6 @@ button.perfilUser {
     height: 40px;
 }
 
-.LogOFF {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-}
-.LogOFF:hover {
-    cursor: pointer;
-}
-.LogOFF svg{
-    width: 40px;
-    height: 50px;
-    background: none;
-    border: none;
-}
 
 /*Configurações do aside do menu responsivo*/
 .menuLateral{
@@ -227,14 +209,6 @@ button.perfilUser {
     }
 
 
-    .logoff{
-        display: flex;
-        font-size: 20px;
-        align-items: center;
-    }
-    .logoff label{
-        padding-left: 5px;
-    }
 
 .conteudoPagina{
     display: flex;
