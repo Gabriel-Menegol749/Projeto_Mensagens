@@ -27,15 +27,15 @@ router.get('/cadastro', (req, res) => {
 
 router.post('/cadastro', async (req, res) => {
   try {
-    const result = await usersController.store(req, res);
-    if (result) {
-      res.redirect('/TelaPrincipal');
+    const result = await usersController.store(req);
+    if (result.success) {
+      return res.redirect('/TelaPrincipal');
     } else {
-      res.status(500).send('Erro ao cadastrar usuário');
+      return res.status(500).send(result.error);
     }
   } catch (error) {
     console.error('Erro ao cadastrar usuário:', error);
-    res.status(500).send('Erro ao cadastrar usuário');
+    return res.status(500).send('Erro ao cadastrar usuário');
   }
 });
 

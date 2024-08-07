@@ -21,15 +21,15 @@ module.exports = {
         const { nome, email, senha } = req.body;
 
         try {
-            const user = await User.create({
+            const newUser = await User.create({
                 NomeUsuario: nome,
                 emailUsuario: email,
                 SenhaUsuario: senha
             });
-            return res.status(201).send(user);
+            return res.status(201).send(newUser);
         } catch (error) {
-            console.error('Erro ao cadastrar usuário:', error);
-            return res.status(500).send({ error: 'Erro ao cadastrar usuário' });
+            console.error('Erro ao criar usuário:', error);
+            return res.status(500).send({ error: 'Erro ao criar usuário' });
         }
     },
 
